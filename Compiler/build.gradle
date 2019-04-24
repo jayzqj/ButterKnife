@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':Annotations')
+    //谷歌注解处理器服务
+    implementation 'com.google.auto.service:auto-service:1.0-rc2'
+}
+//中文乱码问题
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+sourceCompatibility = "8"
+targetCompatibility = "8"
