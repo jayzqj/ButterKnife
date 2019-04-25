@@ -102,12 +102,13 @@ public class ButterKnifeProcessor extends AbstractProcessor {
                 //需要导入的包
                 writer.write("import android.view.View;\n");
                 writer.write("import com.jay.netease.library.ViewBinder;\n");
-                writer.write(" import android.util.Log;\n");
+                writer.write("import android.util.Log;\n");
 
                 writer.write("import com.jay.netease.library.DebouncingOnClickListener;\n");
+                writer.write("//注解处理器生成\n");
                 writer.write("public class " + activitySimpleName + " implements ViewBinder<" + activityName + ">{\n");
                 writer.write("public void bind(final " + activityName + " target" + "){\n");
-                writer.write(" Log.e(\"ButterKnife\",\"bind\");\n");
+                writer.write("Log.e(\"ButterKnife\",\"bind\");\n");
                 for (VariableElement variableElement : viewElements) {
                     //控件属性名
                     String fieldName = variableElement.getSimpleName().toString();

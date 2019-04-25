@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  */
 
 @Target(ElementType.METHOD)
-@Retention(RetentionPolicy.RUNTIME)
+@Retention(RetentionPolicy.CLASS)
 public @interface OnClick {
     int[] value();
 }

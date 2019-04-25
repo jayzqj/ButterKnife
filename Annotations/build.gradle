@@ -4,5 +4,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
+//中文乱码问题
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
 sourceCompatibility = "8"
 targetCompatibility = "8"

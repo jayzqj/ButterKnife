@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.btn1)
+    @OnClick({R.id.btn1, R.id.btn2})
     public void onClick(View view) {
         Toast.makeText(this, "onClick", Toast.LENGTH_SHORT).show();
         switch (view.getId()) {
