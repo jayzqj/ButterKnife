@@ -18,7 +18,9 @@ public class ButterKnife {
             Class<?> viewBindingClass = Class.forName(activityName);
             ViewBinder viewBinder = (ViewBinder) viewBindingClass.newInstance();
             viewBinder.bind(activity);
+            Log.i(TAG, "bind success");
         } catch (Exception e) {
+            Log.i(TAG, e.toString());
             e.printStackTrace();
         }
     }
